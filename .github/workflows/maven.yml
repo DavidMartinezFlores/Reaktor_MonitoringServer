@@ -23,8 +23,9 @@ jobs:
         #java-version: '17'
         #distribution: 'temurin'
         #cache: maven
-    #- name: Build with Maven CLEAN
-      #run: mvn clean
+        
+    - name: Build with Maven CLEAN
+      run: mvn clean
       
     - name: Build with Maven INSTALL SKIPP Surefire, Failsafe TESTS
       run: mvn install -Dmaven.test.skip=true -DskipTests
